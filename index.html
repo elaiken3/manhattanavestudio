@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Manhattan Ave Studio — Custom Web Development, Brooklyn NY</title>
+  <meta name="description" content="Manhattan Ave Studio builds custom, data-informed websites for small businesses, nonprofits, and founders in Brooklyn and beyond. Fast, beautiful, built to convert." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.manhattanavestudio.com/" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.manhattanavestudio.com/" />
+  <meta property="og:title"       content="Manhattan Ave Studio — Custom Web Development" />
+  <meta property="og:description" content="Custom, data-informed websites for businesses that don't blend in. Based in Brooklyn, NY." />
+  <meta property="og:image"       content="https://www.manhattanavestudio.com/public/og-image.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="icon" href="/public/favicon.ico" />
+
+  <!-- Fonts: Playfair Display (editorial serif) + DM Sans (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/mas.css" />
+
+  <!-- GA4 — uncomment and replace ID before launch
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-main">Manhattan Ave</span>
+        <span class="nav__logo-sub">Studio</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#work"     class="nav__link">Work</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#process"  class="nav__link">Process</a></li>
+        <li><a href="#about"    class="nav__link">About</a></li>
+        <li><a href="#contact"  class="btn btn--sm nav__cta">Start a Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__meta">
+        <span class="hero__location">Brooklyn, NY</span>
+        <span class="hero__divider" aria-hidden="true">·</span>
+        <span class="hero__tagline">Est. 2025</span>
+      </div>
+
+      <h1 class="hero__headline">
+        <span class="hero__line">Custom websites</span>
+        <span class="hero__line hero__line--indent">for businesses</span>
+        <span class="hero__line">that don't <em>blend in.</em></span>
+      </h1>
+
+      <div class="hero__body">
+        <p>
+          We build fast, beautiful, data-informed websites for small businesses,
+          nonprofits, and founders who are serious about their online presence.
+          Not templates. Not guesswork. Real work, built to last.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Start a Project</a>
+          <a href="#work"    class="btn btn--ghost">See Our Work</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolling ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Custom Development</span><span class="ticker__dot">·</span>
+        <span>Data & Analytics</span><span class="ticker__dot">·</span>
+        <span>Mobile-First Design</span><span class="ticker__dot">·</span>
+        <span>Brooklyn-Based</span><span class="ticker__dot">·</span>
+        <span>SEO & Performance</span><span class="ticker__dot">·</span>
+        <span>Serverless Functions</span><span class="ticker__dot">·</span>
+        <span>Ongoing Support</span><span class="ticker__dot">·</span>
+        <span>Custom Development</span><span class="ticker__dot">·</span>
+        <span>Data & Analytics</span><span class="ticker__dot">·</span>
+        <span>Mobile-First Design</span><span class="ticker__dot">·</span>
+        <span>Brooklyn-Based</span><span class="ticker__dot">·</span>
+        <span>SEO & Performance</span><span class="ticker__dot">·</span>
+        <span>Serverless Functions</span><span class="ticker__dot">·</span>
+        <span>Ongoing Support</span><span class="ticker__dot">·</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== SELECTED WORK ===================== -->
+  <section class="work section" id="work">
+    <div class="container">
+      <header class="section__header section__header--split">
+        <div>
+          <p class="section__num" aria-hidden="true">01</p>
+          <h2 class="section__heading">Selected Work</h2>
+        </div>
+        <p class="section__note">
+          Each project is built from scratch — no templates, no page builders.
+        </p>
+      </header>
+
+      <div class="work__grid">
+
+        <!-- Project 1 — Feature card (large) -->
+        <article class="project-card project-card--feature">
+          <div class="project-card__img project-card__img--1">
+            <div class="project-card__overlay">
+              <a href="#contact" class="project-card__link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Fundraising · Nonprofit</span>
+            <h3 class="project-card__title">Miles for Uncle Edwy</h3>
+            <p class="project-card__desc">
+              A memorial fundraising website honoring a family member lost to colorectal
+              cancer. Built with a custom photo slideshow, mobile-optimized layout,
+              Google Analytics, and GitHub Pages deployment — raising funds for
+              St. Jude Children's Hospital and Memorial Sloan Kettering.
+            </p>
+            <ul class="project-card__tags">
+              <li>HTML/CSS/JS</li>
+              <li>GitHub Pages</li>
+              <li>Google Analytics</li>
+              <li>Custom Slideshow</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-card__img project-card__img--2">
+            <div class="project-card__overlay">
+              <a href="#contact" class="project-card__link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Small Business · Service</span>
+            <h3 class="project-card__title">Project Name</h3>
+            <p class="project-card__desc">
+              Brief project description — what the client needed, what you built,
+              and what result it delivered. 2–3 sentences.
+            </p>
+            <ul class="project-card__tags">
+              <li>Custom Design</li>
+              <li>Vercel</li>
+              <li>Contact Form</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-card__img project-card__img--3">
+            <div class="project-card__overlay">
+              <a href="#contact" class="project-card__link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Nonprofit · Community</span>
+            <h3 class="project-card__title">Project Name</h3>
+            <p class="project-card__desc">
+              Brief project description — what the client needed, what you built,
+              and what result it delivered. 2–3 sentences.
+            </p>
+            <ul class="project-card__tags">
+              <li>Custom Design</li>
+              <li>Analytics</li>
+              <li>Mobile-First</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-card__img project-card__img--4">
+            <div class="project-card__overlay">
+              <a href="#contact" class="project-card__link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Freelancer · Portfolio</span>
+            <h3 class="project-card__title">Project Name</h3>
+            <p class="project-card__desc">
+              Brief project description — what the client needed, what you built,
+              and what result it delivered. 2–3 sentences.
+            </p>
+            <ul class="project-card__tags">
+              <li>Next.js</li>
+              <li>Vercel</li>
+              <li>Custom CMS</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services section section--warm" id="services">
+    <div class="container">
+      <header class="section__header section__header--split">
+        <div>
+          <p class="section__num" aria-hidden="true">02</p>
+          <h2 class="section__heading">What We Build</h2>
+        </div>
+        <p class="section__note">
+          Every engagement starts with a conversation, not a proposal.
+        </p>
+      </header>
+
+      <div class="services__grid">
+
+        <div class="service fade-in">
+          <p class="service__num" aria-hidden="true">A</p>
+          <h3 class="service__title">Custom Web Development</h3>
+          <p class="service__desc">
+            Sites built from scratch around your brand and goals — not a Wix template
+            with your logo swapped in. Clean, fast, accessible code that you own outright.
+            No platform lock-in. No recurring subscription to exist.
+          </p>
+          <p class="service__price">From $750</p>
+        </div>
+
+        <div class="service fade-in">
+          <p class="service__num" aria-hidden="true">B</p>
+          <h3 class="service__title">Data & Analytics</h3>
+          <p class="service__desc">
+            Google Analytics 4 setup, conversion tracking, Core Web Vitals monitoring,
+            and custom reporting so you understand how your site is actually performing.
+            Most web developers bolt this on as an afterthought. We architect for it
+            from day one.
+          </p>
+          <p class="service__price">Included in all projects</p>
+        </div>
+
+        <div class="service fade-in">
+          <p class="service__num" aria-hidden="true">C</p>
+          <h3 class="service__title">Ongoing Care</h3>
+          <p class="service__desc">
+            Monthly maintenance, content updates, performance monitoring, and a
+            real person who knows your codebase when something needs attention.
+            Your site shouldn't be something you build once and forget.
+          </p>
+          <p class="service__price">From $150/month</p>
+        </div>
+
+        <div class="service fade-in">
+          <p class="service__num" aria-hidden="true">D</p>
+          <h3 class="service__title">Strategy & Consultation</h3>
+          <p class="service__desc">
+            Not sure where to start? We'll audit your current site, map out what's
+            working and what isn't, and give you a clear, honest plan — whether or
+            not you hire us to build it.
+          </p>
+          <p class="service__price">$150/hour</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="process section" id="process">
+    <div class="container">
+      <header class="section__header">
+        <p class="section__num" aria-hidden="true">03</p>
+        <h2 class="section__heading">How We Work</h2>
+      </header>
+
+      <div class="process__steps">
+
+        <div class="process__step fade-in">
+          <div class="process__step-head">
+            <span class="process__step-num">01</span>
+            <h3 class="process__step-title">Discovery</h3>
+          </div>
+          <p class="process__step-body">
+            We start with a real conversation — your goals, your audience, your timeline,
+            and your budget. No assumptions, no package fitting. By the end of this
+            call, we both know exactly what we're building and why.
+          </p>
+        </div>
+
+        <div class="process__step fade-in">
+          <div class="process__step-head">
+            <span class="process__step-num">02</span>
+            <h3 class="process__step-title">Design</h3>
+          </div>
+          <p class="process__step-body">
+            We develop a design direction built around your brand — not a template.
+            You'll see wireframes and visual mockups before a single line of code
+            is written. Two rounds of revisions are included at this stage.
+          </p>
+        </div>
+
+        <div class="process__step fade-in">
+          <div class="process__step-head">
+            <span class="process__step-num">03</span>
+            <h3 class="process__step-title">Build</h3>
+          </div>
+          <p class="process__step-body">
+            Your site is coded by hand — performant, accessible, and SEO-ready
+            from the start. You'll have a live preview URL throughout the build
+            process so you can review real progress, not static screenshots.
+          </p>
+        </div>
+
+        <div class="process__step fade-in">
+          <div class="process__step-head">
+            <span class="process__step-num">04</span>
+            <h3 class="process__step-title">Launch & Beyond</h3>
+          </div>
+          <p class="process__step-body">
+            We handle deployment, DNS, SSL, and analytics setup. Your site goes
+            live on our reliable infrastructure, and we stick around. Every project
+            includes post-launch support — because a website isn't a deliverable,
+            it's an ongoing relationship.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about section section--warm" id="about">
+    <div class="container about__grid">
+
+      <div class="about__img-wrap">
+        <!-- Replace with a photo. Warm, approachable, professional. -->
+        <div class="about__img-placeholder" aria-hidden="true">
+          <span>MAS</span>
+        </div>
+        <div class="about__img-caption">
+          <p>Brooklyn, New York</p>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="section__num" aria-hidden="true">04</p>
+        <h2 class="section__heading">Built Different,<br /><em>By Design.</em></h2>
+
+        <p class="about__body">
+          Manhattan Ave Studio is a Brooklyn-based web development studio with roots
+          in data engineering and software development. That means when we build your
+          website, we're thinking about more than how it looks — we're thinking about
+          how it performs, what it measures, and how it grows with your business.
+        </p>
+
+        <p class="about__body">
+          We use AI tools to work efficiently, but every project is driven by a human
+          who understands your goals, reviews every line of code, and is accountable
+          for the result. Think of it like a general contractor with power tools —
+          the tools make the work faster. The expertise makes it right.
+        </p>
+
+        <p class="about__body">
+          We're not an agency. We don't take on more projects than we can do well.
+          When you work with Manhattan Ave Studio, you're working with the person
+          who built your site — not a rotating cast of contractors.
+        </p>
+
+        <div class="about__facts">
+          <div class="about__fact">
+            <p class="about__fact-num">10+</p>
+            <p class="about__fact-label">Years in software & data engineering</p>
+          </div>
+          <div class="about__fact">
+            <p class="about__fact-num">100%</p>
+            <p class="about__fact-label">Custom-built — no templates, ever</p>
+          </div>
+          <div class="about__fact">
+            <p class="about__fact-num">BK</p>
+            <p class="about__fact-label">Brooklyn-rooted, serving clients everywhere</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact section" id="contact">
+    <div class="container contact__grid">
+
+      <div class="contact__info">
+        <p class="section__num" aria-hidden="true">05</p>
+        <h2 class="section__heading">Let's Build<br /><em>Something.</em></h2>
+        <p class="contact__sub">
+          Tell us about your project. We'll get back to you within one business day
+          with honest thoughts and a clear next step — no pitch decks, no pressure.
+        </p>
+
+        <div class="contact__links">
+          <a href="mailto:hello@manhattanavestudio.com" class="contact__link">
+            hello@manhattanavestudio.com
+          </a>
+          <a href="https://www.instagram.com/manhattanavestudio" target="_blank" rel="noopener" class="contact__link">
+            @manhattanavestudio
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__form-wrap">
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="project">Type of Project</label>
+            <select id="project" name="project">
+              <option value="">What can we help with?</option>
+              <option value="new-site">New website from scratch</option>
+              <option value="redesign">Redesign an existing site</option>
+              <option value="maintenance">Ongoing maintenance & care</option>
+              <option value="analytics">Analytics & data setup</option>
+              <option value="consultation">Consultation / strategy</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5"
+              placeholder="What are you building? Who's it for? What's your timeline? The more context the better."
+              required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <!-- Honeypot -->
+          <div class="form-group form-group--honeypot" aria-hidden="true">
+            <label for="website">Website (leave blank)</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span class="btn__text">Send Message</span>
+            <span class="btn__loading" hidden>Sending…</span>
+          </button>
+
+          <div class="form-feedback" id="formFeedback" role="alert" hidden></div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Manhattan Ave Studio</p>
+        <p class="footer__sub">Custom web development · Brooklyn, NY</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="https://www.instagram.com/manhattanavestudio" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <!-- <a href="https://linkedin.com/company/manhattanavestudio" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a> -->
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <div class="container">
+        <p>&copy; <span id="currentYear"></span> Manhattan Ave Studio. All rights reserved.</p>
+        <!-- <a href="/privacy">Privacy Policy</a> -->
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="scripts/mas.js"></script>
+</body>
+</html>
