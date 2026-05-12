@@ -660,24 +660,39 @@ p { line-height: var(--leading-relaxed); }
   top: 100px;
 }
 
-.about__img-placeholder {
+.about__img-frame {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: linear-gradient(160deg, var(--color-bg-warm) 0%, var(--color-border-warm) 100%);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-warm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.about__img-placeholder span {
-  font-family: var(--font-heading);
-  font-size: var(--text-4xl);
-  font-weight: 900;
-  font-style: italic;
-  color: var(--color-border-warm);
-  filter: brightness(0.85);
+/* Subtle warm tint to blend the blue sky into the cream/caramel palette */
+.about__img-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(155, 106, 58, 0.12) 0%,
+    rgba(28, 20, 16, 0.18) 100%
+  );
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.about__img-wrap:hover .about__img {
+  transform: scale(1.03);
 }
 
 .about__img-caption {
@@ -1245,7 +1260,7 @@ p { line-height: var(--leading-relaxed); }
   /* About */
   .about__grid { grid-template-columns: 1fr; }
   .about__img-wrap { position: static; }
-  .about__img-placeholder { aspect-ratio: 16 / 9; }
+  .about__img-frame { aspect-ratio: 16 / 9; }
   .about__facts { grid-template-columns: 1fr; }
   .about__fact { border-right: none; border-bottom: 1px solid var(--color-border-warm); }
   .about__fact:last-child { border-bottom: none; }
