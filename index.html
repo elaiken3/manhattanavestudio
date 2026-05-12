@@ -421,13 +421,16 @@
 
       <div class="about__img-wrap">
         <div class="about__img-frame">
-          <img
-            src="/public/manhattan-ave.jpg"
-            alt="Manhattan Avenue street sign, Brooklyn, NY"
-            class="about__img"
-            width="800"
-            loading="lazy"
-          />
+          <picture>
+            <source srcset="/public/manhattan-ave.webp" type="image/webp" />
+            <img
+              src="/public/manhattan-ave.jpg"
+              alt="Manhattan Avenue street sign, Brooklyn, NY"
+              class="about__img"
+              width="800"
+              loading="lazy"
+            />
+          </picture>
         </div>
         <div class="about__img-caption">
           <p>Manhattan Ave · Brooklyn, NY</p>
