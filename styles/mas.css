@@ -1136,38 +1136,67 @@ p { line-height: var(--leading-relaxed); }
 @media (max-width: 768px) {
   /* Nav */
   .nav__toggle { display: flex; }
+
   .nav__links {
     position: fixed;
-    inset: 0;
+    top: 64px;          /* start directly below the header, not behind it */
+    left: 0;
+    right: 0;
+    bottom: 0;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--color-bg);
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: var(--color-bg);  /* explicit property, not shorthand */
     gap: 0;
-    padding: 5rem 2rem 3rem;
+    padding: 0;
     transform: translateX(100%);
     transition: transform var(--transition-base);
     z-index: 990;
-    list-style: none;
+    overflow-y: auto;   /* scroll within nav if needed */
+    -webkit-overflow-scrolling: touch;
   }
-  .nav__links li {
-    width: 100%;
-    text-align: center;
+
+  .nav__links.is-open { transform: translateX(0); }
+
+  .nav__links > li {
     border-bottom: 1px solid var(--color-border);
+    width: 100%;
   }
-  .nav__links li:first-child {
+
+  .nav__links > li:first-child {
     border-top: 1px solid var(--color-border);
+    margin-top: 1.5rem;
   }
+
   .nav__links .nav__link {
     display: block;
-    padding: 1.1rem 1rem;
+    padding: 1.1rem 1.5rem;
     font-size: var(--text-lg);
     font-weight: 600;
     color: var(--color-heading);
-    letter-spacing: 0.01em;
+    width: 100%;
+    text-align: left;
   }
-  .nav__links.is-open { transform: translateX(0); }
-  .nav__cta { display: none; }
+
+  .nav__links .nav__link:hover,
+  .nav__links .nav__link.is-active {
+    background-color: var(--color-bg-warm);
+    color: var(--color-primary);
+  }
+
+  /* Show CTA as a proper button at the bottom */
+  .nav__links > li:last-child {
+    border-bottom: none;
+    padding: 1.5rem;
+  }
+
+  .nav__cta {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    font-size: var(--text-base);
+    padding: 0.9rem 1.5rem;
+  }
 
   /* Hero */
   .hero__inner {
