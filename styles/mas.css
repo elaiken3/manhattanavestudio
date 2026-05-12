@@ -448,7 +448,7 @@ p { line-height: var(--leading-relaxed); }
 
 /* Project screenshots */
 .project-card__img--1 { background-image: url('/public/project-miles.webp'); background-size: cover; background-position: top center; }
-.project-card__img--2 { background-image: url('/public/project-futureforward.webp'); background-size: cover; background-position: top center; }
+.project-card__img--2 { background-image: url('/public/project-rootsandproofs.webp'); background-size: cover; background-position: top center; }
 .project-card__img--3 { background-image: url('/public/project-tend.webp'); background-size: cover; background-position: top center; }
 .project-card__img--4 { background-image: url('/public/project-alphas.webp'); background-size: cover; background-position: top center; }
 
