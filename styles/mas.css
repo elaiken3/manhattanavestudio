@@ -222,9 +222,19 @@ p { line-height: var(--leading-relaxed); }
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Pseudo-element handles the blur so the header doesn't become
+   a containing block for position:fixed children (backdrop-filter side effect) */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(250, 248, 242, 0.94);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
 }
 
 .nav {
