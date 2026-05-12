@@ -12,14 +12,12 @@ if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('is-open');
     navToggle.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
   });
 
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       navLinks.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
     });
   });
 
@@ -27,7 +25,6 @@ if (navToggle && navLinks) {
     if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
       navLinks.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
       navToggle.focus();
     }
   });
