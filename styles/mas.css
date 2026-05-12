@@ -446,14 +446,11 @@ p { line-height: var(--leading-relaxed); }
   min-height: 360px;
 }
 
-/* Miles for Uncle Edwy — dark navy, deep blue, warm orange */
-.project-card__img--1 { background: linear-gradient(145deg, #0d1b2e 0%, #1a3a5c 55%, #c45c20 100%); }
-/* Future Forward GIL — near-black, dark brown, gold */
-.project-card__img--2 { background: linear-gradient(145deg, #0e0b06 0%, #2a1d00 55%, #c9a227 100%); }
-/* Tend: Recovery Care — warm cream, sage, forest green */
-.project-card__img--3 { background: linear-gradient(145deg, #f0ebe0 0%, #4a7c68 55%, #1c3d2e 100%); }
-/* Brooklyn Alphas GIL — black, very dark, gold */
-.project-card__img--4 { background: linear-gradient(145deg, #080808 0%, #1a1200 55%, #d4a017 100%); }
+/* Project screenshots */
+.project-card__img--1 { background-image: url('/public/project-miles.webp'); background-size: cover; background-position: top center; }
+.project-card__img--2 { background-image: url('/public/project-futureforward.webp'); background-size: cover; background-position: top center; }
+.project-card__img--3 { background-image: url('/public/project-tend.webp'); background-size: cover; background-position: top center; }
+.project-card__img--4 { background-image: url('/public/project-alphas.webp'); background-size: cover; background-position: top center; }
 
 .project-card__overlay {
   position: absolute;
