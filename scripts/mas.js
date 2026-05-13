@@ -1,5 +1,15 @@
 'use strict';
 
+/* ── Analytics helper ───────────────────────────────── */
+/* Safe wrapper around gtag — no-ops if GA isn't loaded (dev, ad-blockers). */
+function track(event, params = {}) {
+  try {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', event, params);
+    }
+  } catch (_) { /* swallow */ }
+}
+
 /* Footer year */
 const yr = document.getElementById('currentYear');
 if (yr) yr.textContent = new Date().getFullYear();
@@ -68,6 +78,58 @@ if (navToggle && navLinks) {
   targets.forEach(el => io.observe(el));
 })();
 
+/* ── CTA + outbound click tracking ──────────────────── */
+(function () {
+  document.querySelectorAll('[data-cta]').forEach(el => {
+    el.addEventListener('click', () => {
+      track('cta_click', {
+        cta_label: el.dataset.cta,
+        link_text: (el.textContent || '').trim().slice(0, 80),
+        link_url:  el.getAttribute('href') || ''
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-outbound], a[href^="http"]').forEach(a => {
+    const href = a.getAttribute('href') || '';
+    if (!/^https?:\/\//i.test(href)) return;
+    if (/manhattanavestudio\.com/i.test(href)) return;
+    a.addEventListener('click', () => {
+      track('outbound_click', {
+        outbound_label: a.dataset.outbound || '',
+        link_url:       href,
+        link_domain:    (() => { try { return new URL(href).hostname; } catch (_) { return ''; } })()
+      });
+    });
+  });
+})();
+
+/* ── Scroll depth tracking (25/50/75/100) ───────────── */
+(function () {
+  const marks = [25, 50, 75, 100];
+  const fired = new Set();
+  let ticking = false;
+
+  function check() {
+    ticking = false;
+    const doc = document.documentElement;
+    const scrollTop = window.scrollY || doc.scrollTop;
+    const height    = doc.scrollHeight - doc.clientHeight;
+    if (height <= 0) return;
+    const pct = Math.min(100, Math.round((scrollTop / height) * 100));
+    marks.forEach(m => {
+      if (pct >= m && !fired.has(m)) {
+        fired.add(m);
+        track('scroll_depth', { percent: m });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(check); ticking = true; }
+  }, { passive: true });
+})();
+
 /* ── Contact form ───────────────────────────────────── */
 (function () {
   const form      = document.getElementById('contactForm');
@@ -77,6 +139,8 @@ if (navToggle && navLinks) {
   const btnText   = submitBtn.querySelector('.btn__text');
   const btnLoad   = submitBtn.querySelector('.btn__loading');
   const feedback  = document.getElementById('formFeedback');
+
+  let formStarted = false;
 
   function showError(inputId, errId, msg) {
     const el  = document.getElementById(inputId);
@@ -102,26 +166,28 @@ if (navToggle && navLinks) {
 
   function validate(data) {
     let ok = true;
+    const errors = [];
 
     clearError('name', 'nameError');
     if (!data.name.trim()) {
-      showError('name', 'nameError', 'Please enter your name.'); ok = false;
+      showError('name', 'nameError', 'Please enter your name.'); ok = false; errors.push('name');
     }
 
     clearError('email', 'emailError');
     if (!data.email.trim()) {
-      showError('email', 'emailError', 'Please enter your email address.'); ok = false;
+      showError('email', 'emailError', 'Please enter your email address.'); ok = false; errors.push('email_missing');
     } else if (!isValidEmail(data.email)) {
-      showError('email', 'emailError', 'Please enter a valid email address.'); ok = false;
+      showError('email', 'emailError', 'Please enter a valid email address.'); ok = false; errors.push('email_invalid');
     }
 
     clearError('message', 'messageError');
     if (!data.message.trim()) {
-      showError('message', 'messageError', 'Please tell us about your project.'); ok = false;
+      showError('message', 'messageError', 'Please tell us about your project.'); ok = false; errors.push('message_missing');
     } else if (data.message.trim().length < 10) {
-      showError('message', 'messageError', 'Please add a bit more detail.'); ok = false;
+      showError('message', 'messageError', 'Please add a bit more detail.'); ok = false; errors.push('message_short');
     }
 
+    if (!ok) track('form_error', { fields: errors.join(',') });
     return ok;
   }
 
@@ -138,6 +204,14 @@ if (navToggle && navLinks) {
     feedback.hidden      = false;
     feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
+
+  // form_start — fires once on first focus inside the form
+  form.addEventListener('focusin', () => {
+    if (!formStarted) {
+      formStarted = true;
+      track('form_start', { form_id: 'contactForm' });
+    }
+  }, { once: false });
 
   ['name', 'email', 'message'].forEach(id => {
     const el = document.getElementById(id);
@@ -183,11 +257,20 @@ if (navToggle && navLinks) {
 
       if (!res.ok) throw new Error(`${res.status}`);
 
+      // GA4 recommended lead event
+      track('generate_lead', {
+        currency:     'USD',
+        value:        1,
+        project_type: data.project || 'unspecified',
+        form_id:      'contactForm'
+      });
+
       showFeedback("Message received! We'll get back to you within one business day.", 'success');
       form.reset();
 
     } catch (err) {
       console.error('Form error:', err);
+      track('form_submit_error', { message: String(err).slice(0, 120) });
       showFeedback(
         'Something went wrong. Please try emailing us directly at hello@manhattanavestudio.com',
         'error'

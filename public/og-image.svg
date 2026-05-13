@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Manhattan Ave Studio — Brooklyn Web Developer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#FAF8F2"/>
+      <stop offset="100%" stop-color="#F2EBE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1080" height="510" fill="none" stroke="#CFC1AF" stroke-width="2" rx="12"/>
+
+  <text x="100" y="170"
+        font-family="DM Sans, system-ui, sans-serif"
+        font-size="22" font-weight="600" letter-spacing="6"
+        fill="#7A6D65" text-transform="uppercase">BROOKLYN, NY · EST. 2026</text>
+
+  <text x="100" y="300"
+        font-family="Playfair Display, Georgia, serif"
+        font-size="88" font-weight="700" fill="#1C1410">Custom websites</text>
+  <text x="100" y="395"
+        font-family="Playfair Display, Georgia, serif"
+        font-size="88" font-weight="700" fill="#1C1410">for businesses that</text>
+  <text x="100" y="490"
+        font-family="Playfair Display, Georgia, serif"
+        font-size="88" font-weight="900" font-style="italic" fill="#9B6A3A">don't blend in.</text>
+
+  <text x="100" y="555"
+        font-family="DM Sans, system-ui, sans-serif"
+        font-size="22" font-weight="600" letter-spacing="4" fill="#2E2520">Manhattan Ave Studio</text>
+
+  <line x1="100" y1="200" x2="180" y2="200" stroke="#9B6A3A" stroke-width="3"/>
+</svg>

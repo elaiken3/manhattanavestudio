@@ -1,7 +1,7 @@
 {
-  "name": "client-site-starter",
+  "name": "manhattan-ave-studio",
   "version": "1.0.0",
-  "description": "Client website starter template",
+  "description": "Manhattan Ave Studio — Brooklyn-based custom web development studio.",
   "private": true,
   "type": "module",
   "engines": {
@@ -9,10 +9,16 @@
   },
   "scripts": {
     "dev": "vercel dev",
+    "serve": "npx --yes serve@latest .",
     "deploy:preview": "vercel",
-    "deploy:prod": "vercel --prod"
+    "deploy:prod": "vercel --prod",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "lighthouse": "npx --yes @lhci/cli@latest autorun --collect.url=http://localhost:3000 --collect.numberOfRuns=1 || true"
   },
   "devDependencies": {
     "vercel": "latest"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.0"
   }
 }

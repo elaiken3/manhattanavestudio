@@ -4,24 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Manhattan Ave Studio — Custom Web Development, Brooklyn NY</title>
-  <meta name="description" content="Manhattan Ave Studio builds custom, data-informed websites for small businesses, nonprofits, and founders in Brooklyn and beyond. Fast, beautiful, built to convert." />
-  <meta name="robots" content="index, follow" />
+  <title>Brooklyn Web Developer & Custom Website Design | Manhattan Ave Studio</title>
+  <meta name="description" content="Manhattan Ave Studio is a Brooklyn web developer building custom, data-informed websites for small businesses, nonprofits, and founders. Fast, beautiful, built to convert. Custom code, no templates." />
+  <meta name="keywords" content="Brooklyn web developer, custom website design Brooklyn, NYC web developer, small business website, nonprofit web design, custom web development, SEO website" />
+  <meta name="author" content="Manhattan Ave Studio" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#FAF8F2" />
+  <meta name="geo.region" content="US-NY" />
+  <meta name="geo.placename" content="Brooklyn" />
   <link rel="canonical" href="https://www.manhattanavestudio.com/" />
 
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://www.manhattanavestudio.com/" />
-  <meta property="og:title"       content="Manhattan Ave Studio — Custom Web Development" />
-  <meta property="og:description" content="Custom, data-informed websites for businesses that don't blend in. Based in Brooklyn, NY." />
-  <meta property="og:image"       content="https://www.manhattanavestudio.com/public/og-image.jpg" />
-  <meta name="twitter:card"       content="summary_large_image" />
+  <!-- Search engine verification (replace with real tokens) -->
+  <!-- <meta name="google-site-verification" content="REPLACE_ME" /> -->
+  <!-- <meta name="msvalidate.01" content="REPLACE_ME" /> -->
 
-  <link rel="icon" href="/public/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type"            content="website" />
+  <meta property="og:site_name"       content="Manhattan Ave Studio" />
+  <meta property="og:locale"          content="en_US" />
+  <meta property="og:url"             content="https://www.manhattanavestudio.com/" />
+  <meta property="og:title"           content="Brooklyn Web Developer & Custom Website Design | Manhattan Ave Studio" />
+  <meta property="og:description"     content="Custom, data-informed websites for businesses that don't blend in. Hand-coded in Brooklyn, NY. Fast, SEO-ready, and built to convert." />
+  <meta property="og:image"           content="https://www.manhattanavestudio.com/public/og-image.svg" />
+  <meta property="og:image:secure_url" content="https://www.manhattanavestudio.com/public/og-image.svg" />
+  <meta property="og:image:type"      content="image/svg+xml" />
+  <meta property="og:image:width"     content="1200" />
+  <meta property="og:image:height"    content="630" />
+  <meta property="og:image:alt"       content="Manhattan Ave Studio — Custom Web Development, Brooklyn NY" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card"           content="summary_large_image" />
+  <meta name="twitter:title"          content="Brooklyn Web Developer & Custom Website Design | Manhattan Ave Studio" />
+  <meta name="twitter:description"    content="Custom, data-informed websites for businesses that don't blend in. Hand-coded in Brooklyn, NY." />
+  <meta name="twitter:image"          content="https://www.manhattanavestudio.com/public/og-image.svg" />
+  <meta name="twitter:image:alt"      content="Manhattan Ave Studio — Custom Web Development, Brooklyn NY" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="alternate icon" href="/public/favicon.ico" />
+  <link rel="apple-touch-icon" href="/public/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Fonts: Playfair Display (editorial serif) + DM Sans (clean body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- LCP image preload -->
+  <link rel="preload" as="image" href="/public/manhattan-ave.webp" type="image/webp" fetchpriority="high" />
 
   <link rel="stylesheet" href="styles/mas.css" />
 
@@ -31,22 +61,153 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
-    gtag('config', 'G-BGJ9FZH32H');
+    gtag('config', 'G-BGJ9FZH32H', {
+      send_page_view: true,
+      anonymize_ip: true
+    });
+  </script>
+
+  <!-- Structured data: ProfessionalService + WebSite + Services + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.manhattanavestudio.com/#business",
+        "name": "Manhattan Ave Studio",
+        "alternateName": "Manhattan Avenue Studio",
+        "url": "https://www.manhattanavestudio.com/",
+        "logo": "https://www.manhattanavestudio.com/public/og-image.svg",
+        "image": "https://www.manhattanavestudio.com/public/og-image.svg",
+        "description": "Brooklyn-based custom web development studio building fast, data-informed websites for small businesses, nonprofits, and founders.",
+        "email": "hello@manhattanavestudio.com",
+        "priceRange": "$$",
+        "foundingDate": "2026",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brooklyn",
+          "addressRegion": "NY",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Brooklyn" },
+          { "@type": "City", "name": "New York" },
+          { "@type": "Country", "name": "United States" }
+        ],
+        "knowsAbout": [
+          "Custom web development",
+          "Technical SEO",
+          "Google Analytics 4",
+          "Performance optimization",
+          "Accessibility",
+          "Email marketing integration",
+          "Schema markup"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/manhattanavestudio"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Custom Web Development", "description": "Hand-coded websites built from scratch — no templates, no page builders." },
+              "price": "750",
+              "priceCurrency": "USD",
+              "priceSpecification": { "@type": "PriceSpecification", "price": "750", "priceCurrency": "USD", "valueAddedTaxIncluded": false, "minPrice": "750" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Built to Be Found (Technical SEO)", "description": "Meta tags, schema markup, sitemap, Search Console, and GA4 conversion tracking included with every build." },
+              "price": "0",
+              "priceCurrency": "USD",
+              "description": "Included in all projects"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Email & Lead Capture", "description": "Mailchimp, ConvertKit, or Kit integration with branded signup form and welcome automation." },
+              "price": "300",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Strategy & Consultation", "description": "Site audit and roadmap, billed hourly." },
+              "price": "150",
+              "priceCurrency": "USD",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "150", "priceCurrency": "USD", "unitText": "HUR" }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.manhattanavestudio.com/#website",
+        "url": "https://www.manhattanavestudio.com/",
+        "name": "Manhattan Ave Studio",
+        "publisher": { "@id": "https://www.manhattanavestudio.com/#business" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.manhattanavestudio.com/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a custom website cost?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Custom web development starts at $750. Final pricing depends on scope — number of pages, integrations, and design complexity. Every quote is fixed, not hourly, so you know the total before we start." }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a typical project take?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most small-business sites launch in 3–5 weeks from discovery to go-live. Larger multi-page or e-commerce projects run 6–10 weeks. We give a firm timeline after the discovery call." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with clients outside Brooklyn?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We're Brooklyn-rooted but work with clients across NYC and the United States. Discovery and reviews happen over video calls; everything else is shared via live preview URLs." }
+          },
+          {
+            "@type": "Question",
+            "name": "What's included in the SEO foundations?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every site ships with semantic HTML, meta tags, Open Graph and Twitter cards, JSON-LD schema markup, a sitemap.xml, robots.txt, Google Search Console connection, and GA4 with conversion event tracking — no upsell required." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the code?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely. You own the code, the design files, the domain, and the hosting account. Nothing is locked inside a proprietary builder. If you ever want to move it, you can." }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the care plans?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Maintenance ($150/mo) covers updates, monitoring, and 1 hour of support. Growth ($300/mo) adds monthly analytics, Search Console review, and SEO recommendations. Partner ($500/mo) adds ad pixel and email management for clients running active marketing." }
+          }
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 
 <body>
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ===================== HEADER ===================== -->
   <header class="site-header" id="top">
-    <nav class="nav container">
-      <a href="/" class="nav__logo">
+    <nav class="nav container" aria-label="Primary">
+      <a href="/" class="nav__logo" aria-label="Manhattan Ave Studio — home">
         <span class="nav__logo-main">Manhattan Ave</span>
         <span class="nav__logo-sub">Studio</span>
       </a>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
 
@@ -55,11 +216,13 @@
         <li><a href="#services" class="nav__link">Services</a></li>
         <li><a href="#care"     class="nav__link">Care Plans</a></li>
         <li><a href="#about"    class="nav__link">About</a></li>
-        <li><a href="#contact"  class="btn btn--sm nav__cta">Start a Project</a></li>
+        <li><a href="#faq"      class="nav__link">FAQ</a></li>
+        <li><a href="#contact"  class="btn btn--sm nav__cta" data-cta="nav_start_project">Start a Project</a></li>
       </ul>
     </nav>
   </header>
 
+  <main id="main">
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero">
@@ -78,13 +241,13 @@
 
       <div class="hero__body">
         <p>
-          We build fast, beautiful, data-informed websites for small businesses,
-          nonprofits, and founders who are serious about their online presence.
-          Not templates. Not guesswork. Real work, built to last.
+          A Brooklyn web developer building fast, beautiful, data-informed websites
+          for small businesses, nonprofits, and founders who are serious about their
+          online presence. Not templates. Not guesswork. Real work, built to last.
         </p>
         <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary">Start a Project</a>
-          <a href="#work"    class="btn btn--ghost">See Our Work</a>
+          <a href="#contact" class="btn btn--primary" data-cta="hero_start_project">Start a Project</a>
+          <a href="#work"    class="btn btn--ghost"   data-cta="hero_see_work">See Our Work</a>
         </div>
       </div>
     </div>
@@ -128,9 +291,12 @@
 
         <!-- Project 1 — Feature card -->
         <article class="project-card project-card--feature">
-          <div class="project-card__img project-card__img--1">
+          <div class="project-card__img">
+            <img src="/public/project-miles.webp"
+                 alt="Miles for Uncle Edwy — Brooklyn Half Marathon fundraising website honoring a family member, with photo slideshow and live donation integration."
+                 width="800" height="600" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.milesforuncleedwy.org" target="_blank" rel="noopener" class="project-card__link">View Project →</a>
+              <a href="https://www.milesforuncleedwy.org" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_miles">View Project →</a>
             </div>
           </div>
           <div class="project-card__info">
@@ -153,9 +319,12 @@
 
         <!-- Project 2 -->
         <article class="project-card">
-          <div class="project-card__img project-card__img--2">
+          <div class="project-card__img">
+            <img src="/public/project-rootsandproofs.webp"
+                 alt="Roots & Proofs 26 — immersive event website for a Brooklyn cultural night, with full-bleed photo hero and ticketing integration."
+                 width="800" height="600" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.rootsandproofs26.com" target="_blank" rel="noopener" class="project-card__link">View Project →</a>
+              <a href="https://www.rootsandproofs26.com" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_rootsandproofs">View Project →</a>
             </div>
           </div>
           <div class="project-card__info">
@@ -179,9 +348,12 @@
 
         <!-- Project 3 -->
         <article class="project-card">
-          <div class="project-card__img project-card__img--3">
+          <div class="project-card__img">
+            <img src="/public/project-tend.webp"
+                 alt="Tend: Recovery Care — iOS app landing page that turns hospital discharge paperwork into a structured recovery schedule."
+                 width="800" height="600" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.tendrecovery.app" target="_blank" rel="noopener" class="project-card__link">View Project →</a>
+              <a href="https://www.tendrecovery.app" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_tend">View Project →</a>
             </div>
           </div>
           <div class="project-card__info">
@@ -204,9 +376,12 @@
 
         <!-- Project 4 -->
         <article class="project-card">
-          <div class="project-card__img project-card__img--4">
+          <div class="project-card__img">
+            <img src="/public/project-alphas.webp"
+                 alt="The Brooklyn Alphas — full organizational website for the Gamma Iota Lambda Chapter of Alpha Phi Alpha Fraternity, with history, programs, and member tools."
+                 width="800" height="600" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.gil1906.org" target="_blank" rel="noopener" class="project-card__link">View Project →</a>
+              <a href="https://www.gil1906.org" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_alphas">View Project →</a>
             </div>
           </div>
           <div class="project-card__info">
@@ -438,7 +613,9 @@
               alt="Manhattan Avenue street sign, Brooklyn, NY"
               class="about__img"
               width="800"
+              height="1000"
               loading="lazy"
+              decoding="async"
             />
           </picture>
         </div>
@@ -499,12 +676,67 @@
   </section>
 
 
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <header class="section__header">
+        <p class="section__num" aria-hidden="true">06</p>
+        <h2 class="section__heading">Common <em>Questions.</em></h2>
+      </header>
+
+      <div class="faq__list">
+        <details class="faq__item fade-in">
+          <summary class="faq__q">How much does a custom website cost?</summary>
+          <div class="faq__a">
+            <p>Custom web development starts at $750. Final pricing depends on scope — number of pages, integrations, and design complexity. Every quote is fixed, not hourly, so you know the total before we start.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fade-in">
+          <summary class="faq__q">How long does a typical project take?</summary>
+          <div class="faq__a">
+            <p>Most small-business sites launch in 3–5 weeks from discovery to go-live. Larger multi-page or e-commerce projects run 6–10 weeks. We give a firm timeline after the discovery call.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fade-in">
+          <summary class="faq__q">Do you work with clients outside Brooklyn?</summary>
+          <div class="faq__a">
+            <p>Yes. We're Brooklyn-rooted but work with clients across NYC and the United States. Discovery and reviews happen over video calls; everything else is shared via live preview URLs.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fade-in">
+          <summary class="faq__q">What's included in the SEO foundations?</summary>
+          <div class="faq__a">
+            <p>Every site ships with semantic HTML, meta tags, Open Graph and Twitter cards, JSON-LD schema markup, a sitemap.xml, robots.txt, Google Search Console connection, and GA4 with conversion event tracking — no upsell required.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fade-in">
+          <summary class="faq__q">Do I own the code?</summary>
+          <div class="faq__a">
+            <p>Yes, completely. You own the code, the design files, the domain, and the hosting account. Nothing is locked inside a proprietary builder. If you ever want to move it, you can.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fade-in">
+          <summary class="faq__q">What's the difference between the care plans?</summary>
+          <div class="faq__a">
+            <p>Maintenance ($150/mo) covers updates, monitoring, and 1 hour of support. Growth ($300/mo) adds monthly analytics, Search Console review, and SEO recommendations. Partner ($500/mo) adds ad pixel and email management for clients running active marketing.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ===================== CONTACT ===================== -->
-  <section class="contact section" id="contact">
+  <section class="contact section section--warm" id="contact">
     <div class="container contact__grid">
 
       <div class="contact__info">
-        <p class="section__num" aria-hidden="true">06</p>
+        <p class="section__num" aria-hidden="true">07</p>
         <h2 class="section__heading">Let's Build<br /><em>Something.</em></h2>
         <p class="contact__sub">
           Tell us about your project. We'll get back to you within one business day
@@ -512,16 +744,23 @@
         </p>
 
         <div class="contact__links">
-          <a href="mailto:hello@manhattanavestudio.com" class="contact__link">
+          <a href="mailto:hello@manhattanavestudio.com" class="contact__link" data-cta="contact_email">
             hello@manhattanavestudio.com
           </a>
-          <a href="https://www.instagram.com/manhattanavestudio" target="_blank" rel="noopener" class="contact__link">
+          <a href="https://www.instagram.com/manhattanavestudio" target="_blank" rel="noopener" class="contact__link" data-outbound="instagram">
             @manhattanavestudio
           </a>
         </div>
       </div>
 
       <div class="contact__form-wrap">
+        <noscript>
+          <p class="form-feedback is-error">
+            JavaScript is required to submit this form. Please email us directly at
+            <a href="mailto:hello@manhattanavestudio.com">hello@manhattanavestudio.com</a>.
+          </p>
+        </noscript>
+
         <form class="contact-form" id="contactForm" novalidate>
 
           <div class="form-row">
@@ -564,7 +803,7 @@
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
           </div>
 
-          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn" data-cta="contact_submit">
             <span class="btn__text">Send Message</span>
             <span class="btn__loading" hidden>Sending…</span>
           </button>
@@ -576,6 +815,8 @@
 
     </div>
   </section>
+
+  </main>
 
 
   <!-- ===================== FOOTER ===================== -->
@@ -591,19 +832,20 @@
         <a href="#services">Services</a>
         <a href="#care">Care Plans</a>
         <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="footer__social">
-        <a href="https://www.instagram.com/manhattanavestudio" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <!-- <a href="https://linkedin.com/company/manhattanavestudio" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a> -->
+        <a href="https://www.instagram.com/manhattanavestudio" target="_blank" rel="noopener" aria-label="Instagram" data-outbound="footer_instagram">Instagram</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
       </div>
     </div>
 
     <div class="footer__legal">
       <div class="container">
-        <p>&copy; <span id="currentYear"></span> Manhattan Ave Studio. All rights reserved.</p>
-        <!-- <a href="/privacy">Privacy Policy</a> -->
+        <p>&copy; <span id="currentYear"></span> Manhattan Ave Studio. All rights reserved. · Brooklyn, NY</p>
       </div>
     </div>
   </footer>
