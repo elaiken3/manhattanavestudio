@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Manhattan Ave Studio</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to Manhattan Ave Studio's home page or get in touch." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.manhattanavestudio.com/404.html" />
+  <link rel="icon" href="/public/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/mas.css" />
+
+  <style>
+    .notfound {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .notfound__inner { max-width: 540px; }
+    .notfound__num {
+      font-family: var(--font-heading);
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 900;
+      font-style: italic;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .notfound__title { margin-bottom: 1rem; }
+    .notfound__body { color: var(--color-text-muted); margin-bottom: 2rem; }
+    .notfound__actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-main">Manhattan Ave</span>
+        <span class="nav__logo-sub">Studio</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="notfound">
+    <div class="notfound__inner">
+      <p class="notfound__num">404</p>
+      <h1 class="notfound__title">Page not found.</h1>
+      <p class="notfound__body">
+        The page you're looking for has moved, been renamed, or never existed.
+        Let's get you back on track.
+      </p>
+      <div class="notfound__actions">
+        <a href="/" class="btn btn--primary">Back to Home</a>
+        <a href="/#work" class="btn btn--ghost">See Our Work</a>
+        <a href="/#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__legal">
+      <div class="container">
+        <p>&copy; <span id="currentYear"></span> Manhattan Ave Studio. All rights reserved. · Brooklyn, NY</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

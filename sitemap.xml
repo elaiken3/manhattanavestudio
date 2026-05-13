@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.manhattanavestudio.com/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/og-image.svg</image:loc>
+      <image:title>Manhattan Ave Studio — Custom Web Development, Brooklyn NY</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-miles.webp</image:loc>
+      <image:title>Miles for Uncle Edwy — Brooklyn Half Marathon fundraising site</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-rootsandproofs.webp</image:loc>
+      <image:title>Roots & Proofs 26 — Brooklyn cultural event website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-tend.webp</image:loc>
+      <image:title>Tend: Recovery Care — iOS app landing page</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-alphas.webp</image:loc>
+      <image:title>The Brooklyn Alphas — Alpha Phi Alpha chapter website</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.manhattanavestudio.com/privacy.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manhattanavestudio.com/terms.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

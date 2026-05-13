@@ -1,0 +1,15 @@
+{
+  "name": "Manhattan Ave Studio",
+  "short_name": "Manhattan Ave",
+  "description": "Brooklyn web developer building custom, data-informed websites.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F2",
+  "theme_color": "#FAF8F2",
+  "lang": "en-US",
+  "icons": [
+    { "src": "/public/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/public/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
