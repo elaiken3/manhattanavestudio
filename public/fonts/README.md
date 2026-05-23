@@ -10,8 +10,8 @@ Look inside the package's `/Web` or `/Webfonts` subfolder.
 - PPEditorialNew-Italic.woff2
 - PPEditorialNew-Bold.woff2
 - PPEditorialNew-BoldItalic.woff2
-- PPEditorialNew-Ultrabold.woff2
-- PPEditorialNew-UltraboldItalic.woff2
+- PPEditorialNew-Heavy.woff2
+- PPEditorialNew-HeavyItalic.woff2
 
 ## From Satoshi_Complete (Fontshare)
 Prefer the variable file — it covers weights 300–900 in a single file.

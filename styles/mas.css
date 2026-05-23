@@ -32,12 +32,12 @@
 }
 @font-face {
   font-family: 'PP Editorial New';
-  src: url('/public/fonts/PPEditorialNew-Ultrabold.woff2') format('woff2');
+  src: url('/public/fonts/PPEditorialNew-Heavy.woff2') format('woff2');
   font-weight: 900; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'PP Editorial New';
-  src: url('/public/fonts/PPEditorialNew-UltraboldItalic.woff2') format('woff2');
+  src: url('/public/fonts/PPEditorialNew-HeavyItalic.woff2') format('woff2');
   font-weight: 900; font-style: italic; font-display: swap;
 }
 
