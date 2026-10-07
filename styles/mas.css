@@ -1185,13 +1185,14 @@ p { line-height: var(--leading-relaxed); }
    ANIMATIONS
 ============================================================ */
 
-.fade-in {
+/* Only hide when JS is running to reveal it again (class set in <head>) */
+.js .fade-in {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-.fade-in.is-visible {
+.js .fade-in.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
