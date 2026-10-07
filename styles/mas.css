@@ -1374,13 +1374,24 @@ p { line-height: var(--leading-relaxed); }
     gap: 0;
     padding: 0;
     transform: translateX(100%);
-    transition: transform var(--transition-base);
+    /* visibility keeps the closed menu out of the tab order; it flips after the slide-out */
+    visibility: hidden;
+    transition: transform var(--transition-base), visibility 0s linear var(--transition-base);
     z-index: 990;
     overflow-y: auto;   /* scroll within nav if needed */
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
   }
 
-  .nav__links.is-open { transform: translateX(0); }
+  .nav__links.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform var(--transition-base), visibility 0s;
+  }
+
+  /* Page behind the open menu holds still */
+  .nav-open,
+  .nav-open body { overflow: hidden; }
 
   .nav__links > li {
     border-bottom: 1px solid var(--color-border);
@@ -1487,6 +1498,12 @@ p { line-height: var(--leading-relaxed); }
     padding-block: 3rem;
   }
 
-  /* Larger tap target on hamburger */
-  .nav__toggle { padding: 0.75rem; }
+  /* Larger tap target on hamburger: at least 44x44 */
+  .nav__toggle {
+    padding: 0.75rem;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
 }

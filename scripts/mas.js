@@ -19,25 +19,49 @@ const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
+  const isOpen = () => navLinks.classList.contains('is-open');
+
+  function setMenu(open, { returnFocus = false } = {}) {
+    navLinks.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.documentElement.classList.toggle('nav-open', open); // holds the page still
+    if (open) {
+      const first = navLinks.querySelector('a');
+      if (first) first.focus({ preventScroll: true });
+    } else if (returnFocus) {
+      navToggle.focus();
+    }
+  }
+
+  navToggle.addEventListener('click', () => setMenu(!isOpen()));
 
   navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
+    a.addEventListener('click', () => setMenu(false));
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
-      navLinks.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.focus();
+    if (!isOpen()) return;
+    if (e.key === 'Escape') {
+      setMenu(false, { returnFocus: true });
+      return;
+    }
+    // Keep Tab inside the open menu: toggle, then each link, then back
+    if (e.key === 'Tab') {
+      const items = [navToggle, ...navLinks.querySelectorAll('a')];
+      const first = items[0];
+      const last  = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
     }
   });
+
+  // Close if the window grows past the mobile breakpoint while open
+  const mobile = window.matchMedia('(max-width: 768px)');
+  mobile.addEventListener('change', e => { if (!e.matches && isOpen()) setMenu(false); });
 }
 
 /* ── Active nav on scroll ───────────────────────────── */
