@@ -163,8 +163,17 @@ if (navToggle && navLinks) {
   const btnText   = submitBtn.querySelector('.btn__text');
   const btnLoad   = submitBtn.querySelector('.btn__loading');
   const feedback  = document.getElementById('formFeedback');
+  const status    = document.getElementById('formStatus');
 
   let formStarted = false;
+  let sending     = false;
+
+  // Clear first so a repeated message is announced again
+  function announce(msg) {
+    if (!status) return;
+    status.textContent = '';
+    setTimeout(() => { status.textContent = msg; }, 50);
+  }
 
   function showError(inputId, errId, msg) {
     const el  = document.getElementById(inputId);
@@ -211,7 +220,12 @@ if (navToggle && navLinks) {
       showError('message', 'messageError', 'Please add a bit more detail.'); ok = false; errors.push('message_short');
     }
 
-    if (!ok) track('form_error', { fields: errors.join(',') });
+    if (!ok) {
+      track('form_error', { fields: errors.join(',') });
+      // Focus the first field with an error; its message is read via aria-describedby
+      const firstInvalid = form.querySelector('[aria-invalid="true"]');
+      if (firstInvalid) firstInvalid.focus();
+    }
     return ok;
   }
 
@@ -220,13 +234,16 @@ if (navToggle && navLinks) {
     submitBtn.setAttribute('aria-busy', v);
     btnText.hidden = v;
     btnLoad.hidden = !v;
+    if (v) announce(btnLoad.textContent);
   }
 
   function showFeedback(msg, type) {
     feedback.textContent = msg;
     feedback.className   = `form-feedback is-${type}`;
     feedback.hidden      = false;
-    feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    feedback.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
+    announce(msg);
   }
 
   // form_start — fires once on first focus inside the form
@@ -247,6 +264,7 @@ if (navToggle && navLinks) {
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
+    if (sending) return; // one request at a time
 
     const data = {
       name:    form.name.value,
@@ -265,6 +283,7 @@ if (navToggle && navLinks) {
 
     if (!validate(data)) return;
 
+    sending = true;
     setLoading(true);
     feedback.hidden = true;
 
@@ -300,6 +319,7 @@ if (navToggle && navLinks) {
         'error'
       );
     } finally {
+      sending = false;
       setLoading(false);
     }
   });

@@ -825,12 +825,12 @@
           <div class="form-row">
             <div class="form-group">
               <label for="name">Your Name <span aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name" />
+              <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name" aria-describedby="nameError" />
               <span class="form-error" id="nameError"></span>
             </div>
             <div class="form-group">
               <label for="email">Email <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-describedby="emailError" />
               <span class="form-error" id="emailError"></span>
             </div>
           </div>
@@ -852,7 +852,7 @@
             <label for="message">Tell Us About Your Project <span aria-hidden="true">*</span></label>
             <textarea id="message" name="message" rows="5"
               placeholder="What are you building? Who's it for? What's your timeline? The more context the better."
-              required></textarea>
+              required aria-describedby="messageError"></textarea>
             <span class="form-error" id="messageError"></span>
           </div>
 
@@ -867,7 +867,9 @@
             <span class="btn__loading" hidden>Sending…</span>
           </button>
 
-          <div class="form-feedback" id="formFeedback" role="alert" hidden></div>
+          <div class="form-feedback" id="formFeedback" hidden></div>
+          <!-- Announces sending, success, and error to screen readers; present from load so changes are read -->
+          <p class="visually-hidden" id="formStatus" role="status" aria-live="polite"></p>
 
         </form>
       </div>
