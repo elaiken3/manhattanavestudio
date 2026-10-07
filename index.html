@@ -660,18 +660,21 @@
 
       <div class="about__img-wrap">
         <div class="about__img-frame">
-          <picture>
-            <source srcset="/public/manhattan-ave.webp" type="image/webp" />
-            <img
-              src="/public/manhattan-ave.jpg"
-              alt="Manhattan Avenue street sign, Brooklyn, NY"
-              class="about__img"
-              width="800"
-              height="1000"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <!-- Cover-cropped into a portrait frame, so it renders wider than the
+               frame itself: about 113vw on phones and up to 870px on desktop. -->
+          <img
+            src="/public/manhattan-ave-1200.webp"
+            srcset="/public/manhattan-ave-800.webp 800w,
+                    /public/manhattan-ave-1200.webp 1200w,
+                    /public/manhattan-ave-1800.webp 1800w"
+            sizes="(max-width: 768px) 113vw, 870px"
+            alt="Manhattan Avenue street sign, Brooklyn, NY"
+            class="about__img"
+            width="1800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="about__img-caption">
           <p>Manhattan Ave · Brooklyn, NY</p>
