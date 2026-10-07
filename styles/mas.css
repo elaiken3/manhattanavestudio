@@ -561,6 +561,9 @@ p { line-height: var(--leading-relaxed); }
   color: #FAF8F2;
   letter-spacing: 0.04em;
   transition: color var(--transition-fast);
+  /* 44px tall tap target; the negative margin keeps the text where it was */
+  padding-block: 11px;
+  margin-block: -11px;
 }
 .project-card__link:hover { color: var(--color-accent); }
 
