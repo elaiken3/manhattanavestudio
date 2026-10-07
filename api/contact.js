@@ -1,5 +1,5 @@
 // api/contact.js
-// Vercel serverless function — handles contact form submissions
+// Vercel serverless function: handles contact form submissions
 //
 // SETUP:
 // 1. Create a free account at resend.com

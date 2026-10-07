@@ -1,5 +1,5 @@
 /* ============================================================
-   MANHATTAN AVE STUDIO — mas.css
+   MANHATTAN AVE STUDIO: mas.css
    Warm & editorial design system
    Fonts: PP Editorial New (headings) + Satoshi (body), self-hosted
 ============================================================ */
@@ -9,7 +9,7 @@
    FONT FACES (self-hosted from /public/fonts)
 ============================================================ */
 
-/* PP Editorial New — Pangram Pangram, editorial serif */
+/* PP Editorial New: Pangram Pangram, editorial serif */
 @font-face {
   font-family: 'PP Editorial New';
   src: url('/public/fonts/PPEditorialNew-Regular.woff2') format('woff2');
@@ -41,7 +41,7 @@
   font-weight: 900; font-style: italic; font-display: swap;
 }
 
-/* Satoshi — Fontshare, modern grotesque (variable). One file covers 300–900. */
+/* Satoshi: Fontshare, modern grotesque (variable). One file covers 300–900. */
 @font-face {
   font-family: 'Satoshi';
   src: url('/public/fonts/Satoshi-Variable.woff2') format('woff2-variations'),
@@ -530,7 +530,7 @@ p { line-height: var(--leading-relaxed); }
   min-height: 360px;
 }
 
-/* Project screenshots — rendered as <img> for SEO/a11y; cover-fit via object-fit */
+/* Project screenshots: rendered as <img> for SEO/a11y; cover-fit via object-fit */
 .project-card__img > img {
   position: absolute;
   inset: 0;
@@ -1443,7 +1443,7 @@ p { line-height: var(--leading-relaxed); }
     padding: 0.9rem 1.5rem;
   }
 
-  /* Hero — smaller headline, no indent, stacked full-width buttons */
+  /* Hero: smaller headline, no indent, stacked full-width buttons */
   .hero__headline { font-size: clamp(1.875rem, 8vw, 5.5rem); }
   .hero__line--indent { padding-left: 0; }
   .hero__meta { margin-bottom: 0; }
@@ -1458,7 +1458,7 @@ p { line-height: var(--leading-relaxed); }
     grid-template-columns: 1fr;
   }
   .project-card--feature .project-card__img { min-height: 240px; }
-  /* Overlay always visible on touch — no hover available */
+  /* Overlay always visible on touch, since there is no hover */
   .project-card__overlay { opacity: 1; }
 
   /* Section header */
@@ -1485,7 +1485,7 @@ p { line-height: var(--leading-relaxed); }
   .about__fact { border-right: none; border-bottom: 1px solid var(--color-border-warm); }
   .about__fact:last-child { border-bottom: none; }
 
-  /* Contact — prevent long email from overflowing */
+  /* Contact: prevent long email from overflowing */
   .contact__grid { grid-template-columns: 1fr; }
   .contact__info { position: static; }
   .contact__link {
@@ -1494,7 +1494,7 @@ p { line-height: var(--leading-relaxed); }
   }
   .form-row { grid-template-columns: 1fr; }
 
-  /* iOS input zoom fix — inputs below 16px trigger auto-zoom on Safari */
+  /* iOS input zoom fix: inputs below 16px trigger auto-zoom on Safari */
   .form-group input,
   .form-group textarea,
   .form-group select {

@@ -1,7 +1,7 @@
 'use strict';
 
 /* ── Analytics helper ───────────────────────────────── */
-/* Safe wrapper around gtag — no-ops if GA isn't loaded (dev, ad-blockers). */
+/* Safe wrapper around gtag. No-ops if GA isn't loaded (dev, ad-blockers). */
 function track(event, params = {}) {
   try {
     if (typeof window.gtag === 'function') {
@@ -246,7 +246,7 @@ if (navToggle && navLinks) {
     announce(msg);
   }
 
-  // form_start — fires once on first focus inside the form
+  // form_start: fires once on first focus inside the form
   form.addEventListener('focusin', () => {
     if (!formStarted) {
       formStarted = true;
