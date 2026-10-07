@@ -1242,6 +1242,23 @@ p { line-height: var(--leading-relaxed); }
 
 
 /* ============================================================
+   FOCUS (a11y): one visible ring for keyboard focus everywhere
+============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Light ring where the background is dark */
+.site-footer :focus-visible,
+.care-card--featured :focus-visible,
+.project-card__link:focus-visible {
+  outline-color: var(--color-accent);
+}
+
+
+/* ============================================================
    SKIP LINK (a11y)
 ============================================================ */
 
