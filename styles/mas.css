@@ -55,6 +55,26 @@
   font-weight: 300 900; font-style: italic; font-display: swap;
 }
 
+/* Metric-matched fallbacks: Georgia and Arial resized to the web fonts'
+   width and line metrics (capsize method), so text holds its layout while
+   the web fonts swap in. Values from the Bold and 400 instances. */
+@font-face {
+  font-family: 'PP Editorial New Fallback';
+  src: local('Georgia');
+  ascent-override: 82.76%;
+  descent-override: 28.22%;
+  line-gap-override: 9.41%;
+  size-adjust: 106.33%;
+}
+@font-face {
+  font-family: 'Satoshi Fallback';
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 102.10%;
+  descent-override: 24.26%;
+  line-gap-override: 10.11%;
+  size-adjust: 98.92%;
+}
+
 
 /* ============================================================
    RESET & BASE
@@ -110,8 +130,8 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
   --color-error:        #B83232;
 
   /* Typography */
-  --font-heading: 'PP Editorial New', Georgia, 'Times New Roman', serif;
-  --font-body:    'Satoshi', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'PP Editorial New', 'PP Editorial New Fallback', Georgia, 'Times New Roman', serif;
+  --font-body:    'Satoshi', 'Satoshi Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
