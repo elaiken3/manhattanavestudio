@@ -44,6 +44,10 @@
   ],
   "rewrites": [
     {
+      "source": "/favicon.ico",
+      "destination": "/public/favicon.ico"
+    },
+    {
       "source": "/api/:path*",
       "destination": "/api/:path*"
     }
