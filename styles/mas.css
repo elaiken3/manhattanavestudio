@@ -964,6 +964,13 @@ p { line-height: var(--leading-relaxed); }
 
 .form-group textarea { resize: vertical; min-height: 130px; }
 
+/* iOS zooms into fields under 16px on focus; covers tablets past the 768px breakpoint */
+@media (pointer: coarse) {
+  .form-group input,
+  .form-group textarea,
+  .form-group select { font-size: 1rem; }
+}
+
 .form-error {
   font-size: var(--text-xs);
   color: var(--color-error);
