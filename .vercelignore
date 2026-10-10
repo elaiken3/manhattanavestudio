@@ -1,0 +1,4 @@
+# Keep repo notes and local audit files off the public site.
+# Vercel serves the repo root, so any committed Markdown would be readable.
+*.md
+audit/

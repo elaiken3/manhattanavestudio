@@ -6,8 +6,9 @@
  *
  * - Re-encodes large JPGs in /public to a sensible max width and quality.
  * - Emits a WebP alongside each JPG/PNG.
- * - Rasterizes /public/og-image.svg to /public/og-image.jpg (1200x630, ~85q)
- *   and /public/apple-touch-icon.png (180x180).
+ * - Rasterizes /public/og-image.svg to /public/og-image.png (1200x630)
+ *   and /public/favicon.svg to /public/apple-touch-icon.png (180x180), only
+ *   when those files are missing.
  *
  * Sharp is declared as an optionalDependency so the project still installs
  * without the native binary in restricted CI environments.
@@ -58,17 +59,25 @@ async function processRaster(file) {
   console.log(`✓ ${file} → optimized + ${path.basename(webpPath)}`);
 }
 
+const exists = p => stat(p).then(() => true, () => false);
+
+// og-image.png, apple-touch-icon.png, and favicon.ico are committed renders made in a
+// browser with the site's fonts loaded. sharp renders SVG text with system fonts, so
+// only generate these when they are missing; to redo one, delete it first.
 async function generateOgImage() {
   const svg = path.join(PUBLIC_DIR, 'og-image.svg');
   try {
     await stat(svg);
   } catch { return; }
 
-  const jpg = path.join(PUBLIC_DIR, 'og-image.jpg');
-  await sharp(svg, { density: 192 }).resize(1200, 630).jpeg({ quality: 88, mozjpeg: true }).toFile(jpg);
-  console.log('✓ og-image.svg → og-image.jpg (1200x630)');
+  const png = path.join(PUBLIC_DIR, 'og-image.png');
+  if (!(await exists(png))) {
+    await sharp(svg, { density: 192 }).resize(1200, 630).png().toFile(png);
+    console.log('✓ og-image.svg → og-image.png (1200x630)');
+  }
 
   const apple = path.join(PUBLIC_DIR, 'apple-touch-icon.png');
+  if (await exists(apple)) return;
   await sharp(path.join(PUBLIC_DIR, 'favicon.svg'), { density: 384 })
     .resize(180, 180)
     .png()

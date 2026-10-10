@@ -4,20 +4,28 @@
 
   <url>
     <loc>https://www.manhattanavestudio.com/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.manhattanavestudio.com/public/og-image.svg</image:loc>
+      <image:loc>https://www.manhattanavestudio.com/public/og-image.png</image:loc>
       <image:title>Manhattan Ave Studio — Custom Web Development, Brooklyn NY</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.manhattanavestudio.com/public/project-miles.webp</image:loc>
-      <image:title>Miles for Uncle Edwy — Brooklyn Half Marathon fundraising site</image:title>
+      <image:loc>https://www.manhattanavestudio.com/public/project-amandalaiken.webp</image:loc>
+      <image:title>Dr. Amanda L. Aiken: executive coach and leadership strategist website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-villagelions.webp</image:loc>
+      <image:title>Village Lions RFC: New York City rugby club website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-nicholegabrielle.webp</image:loc>
+      <image:title>Nichole Gabrielle &amp; Co.: speaker and coach website</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.manhattanavestudio.com/public/project-rootsandproofs.webp</image:loc>
-      <image:title>Roots & Proofs 26 — Brooklyn cultural event website</image:title>
+      <image:title>Roots And Proofs 26 — Brooklyn cultural event website</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.manhattanavestudio.com/public/project-tend.webp</image:loc>

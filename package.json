@@ -1,7 +1,7 @@
 {
   "name": "manhattan-ave-studio",
   "version": "1.0.0",
-  "description": "Manhattan Ave Studio — Brooklyn-based custom web development studio.",
+  "description": "Manhattan Ave Studio: Brooklyn-based custom web development studio.",
   "private": true,
   "type": "module",
   "engines": {

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Marks JS as available before first paint, so scroll reveals only hide content when they can run -->
+  <script>document.documentElement.classList.add('js');</script>
 
   <title>Brooklyn Web Developer & Custom Website Design | Manhattan Ave Studio</title>
   <meta name="description" content="Manhattan Ave Studio is a Brooklyn web developer building custom, data-informed websites for small businesses, nonprofits, and founders. Fast, beautiful, built to convert. Custom code, no templates." />
@@ -15,7 +17,7 @@
   <link rel="canonical" href="https://www.manhattanavestudio.com/" />
 
   <!-- Search engine verification (replace with real tokens) -->
-  <!-- <meta name="google-site-verification" content="REPLACE_ME" /> -->
+  <meta name="google-site-verification" content="9jrZxjHUIdSvvScNcoYA-F3teLZrRv_IwgkVcGar5z0" />
   <!-- <meta name="msvalidate.01" content="REPLACE_ME" /> -->
 
   <!-- Open Graph -->
@@ -25,9 +27,9 @@
   <meta property="og:url"             content="https://www.manhattanavestudio.com/" />
   <meta property="og:title"           content="Brooklyn Web Developer & Custom Website Design | Manhattan Ave Studio" />
   <meta property="og:description"     content="Custom, data-informed websites for businesses that don't blend in. Hand-coded in Brooklyn, NY. Fast, SEO-ready, and built to convert." />
-  <meta property="og:image"           content="https://www.manhattanavestudio.com/public/og-image.svg" />
-  <meta property="og:image:secure_url" content="https://www.manhattanavestudio.com/public/og-image.svg" />
-  <meta property="og:image:type"      content="image/svg+xml" />
+  <meta property="og:image"           content="https://www.manhattanavestudio.com/public/og-image.png" />
+  <meta property="og:image:secure_url" content="https://www.manhattanavestudio.com/public/og-image.png" />
+  <meta property="og:image:type"      content="image/png" />
   <meta property="og:image:width"     content="1200" />
   <meta property="og:image:height"    content="630" />
   <meta property="og:image:alt"       content="Manhattan Ave Studio — Custom Web Development, Brooklyn NY" />
@@ -36,21 +38,18 @@
   <meta name="twitter:card"           content="summary_large_image" />
   <meta name="twitter:title"          content="Brooklyn Web Developer & Custom Website Design | Manhattan Ave Studio" />
   <meta name="twitter:description"    content="Custom, data-informed websites for businesses that don't blend in. Hand-coded in Brooklyn, NY." />
-  <meta name="twitter:image"          content="https://www.manhattanavestudio.com/public/og-image.svg" />
+  <meta name="twitter:image"          content="https://www.manhattanavestudio.com/public/og-image.png" />
   <meta name="twitter:image:alt"      content="Manhattan Ave Studio — Custom Web Development, Brooklyn NY" />
 
   <!-- Favicons -->
+  <link rel="icon" href="/public/favicon.ico" sizes="32x32" />
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
-  <link rel="alternate icon" href="/public/favicon.ico" />
-  <link rel="apple-touch-icon" href="/public/favicon.svg" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Fonts: self-hosted PP Editorial New (headings) + Satoshi (body) -->
   <link rel="preload" as="font" type="font/woff2" href="/public/fonts/PPEditorialNew-Bold.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/public/fonts/Satoshi-Variable.woff2" crossorigin />
-
-  <!-- LCP image preload -->
-  <link rel="preload" as="image" href="/public/manhattan-ave.webp" type="image/webp" fetchpriority="high" />
 
   <link rel="stylesheet" href="styles/mas.css" />
 
@@ -77,8 +76,8 @@
         "name": "Manhattan Ave Studio",
         "alternateName": "Manhattan Avenue Studio",
         "url": "https://www.manhattanavestudio.com/",
-        "logo": "https://www.manhattanavestudio.com/public/og-image.svg",
-        "image": "https://www.manhattanavestudio.com/public/og-image.svg",
+        "logo": "https://www.manhattanavestudio.com/public/apple-touch-icon.png",
+        "image": "https://www.manhattanavestudio.com/public/og-image.png",
         "description": "Brooklyn-based custom web development studio building fast, data-informed websites for small businesses, nonprofits, and founders.",
         "email": "hello@manhattanavestudio.com",
         "priceRange": "$$",
@@ -288,42 +287,100 @@
 
       <div class="work__grid">
 
-        <!-- Project 1 — Feature card -->
-        <article class="project-card project-card--feature">
+        <!-- Project 1: Dr. Amanda L. Aiken -->
+        <article class="project-card">
           <div class="project-card__img">
-            <img src="/public/project-miles.webp"
-                 alt="Miles for Uncle Edwy — Brooklyn Half Marathon fundraising website honoring a family member, with photo slideshow and live donation integration."
-                 width="800" height="600" loading="lazy" decoding="async" />
+            <img src="/public/project-amandalaiken.webp"
+                 alt="Dr. Amanda L. Aiken: personal website for an executive coach and leadership strategist, bringing together her story, her speaking, and the three organizations she leads."
+                 width="800" height="372" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.milesforuncleedwy.org" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_miles">View Project →</a>
+              <a href="https://www.amandalaiken.com" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_amandalaiken">View Project<span class="visually-hidden">: Dr. Amanda L. Aiken</span> <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="project-card__info">
-            <span class="project-card__cat">Fundraising · Nonprofit</span>
-            <h3 class="project-card__title">Miles for Uncle Edwy</h3>
+            <span class="project-card__cat">Personal Brand · Leadership</span>
+            <h3 class="project-card__title">Dr. Amanda L. Aiken</h3>
             <p class="project-card__desc">
-              A memorial fundraising site built for the 2026 Brooklyn Experience Half Marathon,
-              honoring a family member lost to colorectal cancer. Custom photo slideshow,
-              mobile-optimized layout, and live donation integration — raising funds for
-              St. Jude Children's Research Hospital and Memorial Sloan Kettering.
+              Personal site for an executive coach, leadership strategist, and
+              2026 Tory Burch Fellow. It brings her story, her speaking, and the
+              three organizations she leads into one place, with a green palette
+              designed as a close cousin to her firm sites.
             </p>
             <ul class="project-card__tags">
-              <li>HTML/CSS/JS</li>
-              <li>GitHub Pages</li>
-              <li>Google Analytics</li>
-              <li>Custom Slideshow</li>
+              <li>Multi-page</li>
+              <li>Custom Design</li>
+              <li>Contact Form</li>
+              <li>Vercel</li>
             </ul>
           </div>
         </article>
 
-        <!-- Project 2 -->
+        <!-- Project 2: Village Lions RFC -->
+        <article class="project-card">
+          <div class="project-card__img">
+            <img src="/public/project-villagelions.webp"
+                 alt="Village Lions RFC: website for a New York City rugby club, with team pages, a match schedule, training locations, and donations."
+                 width="800" height="372" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <a href="https://villagelions-site.vercel.app/" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_villagelions">View Preview<span class="visually-hidden">: Village Lions RFC</span> <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Sports · Nonprofit</span>
+            <h3 class="project-card__title">Village Lions RFC</h3>
+            <p class="project-card__desc">
+              Full rebuild for a New York City rugby club playing since 1989. A
+              black and white design with red accents for the Red Lion, the
+              Greenwich Village bar the club is named for. Team pages, a match
+              schedule, training details with maps, and a donation path for the
+              general fund.
+            </p>
+            <ul class="project-card__tags">
+              <li>Multi-page</li>
+              <li>Custom Design</li>
+              <li>Match Schedule</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 3: Nichole Gabrielle & Co. -->
+        <article class="project-card">
+          <div class="project-card__img">
+            <img src="/public/project-nicholegabrielle.webp"
+                 alt="Nichole Gabrielle & Co.: website for a speaker and coach, with her services, speaking, a free guide, and her Substack essays."
+                 width="800" height="372" loading="lazy" decoding="async" />
+            <div class="project-card__overlay">
+              <a href="https://nicholegabrielle-site.vercel.app/" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_nicholegabrielle">View Preview<span class="visually-hidden">: Nichole Gabrielle & Co.</span> <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Coaching · Speaking</span>
+            <h3 class="project-card__title">Nichole Gabrielle & Co.</h3>
+            <p class="project-card__desc">
+              Website for a speaker, neuroscience-informed coach, and
+              health-justice advocate who supports women through illness,
+              caregiving, and identity shifts. Light editorial sections alternate
+              with dark, bold ones, and the homepage carries her Substack essays,
+              a free guide, and paths into coaching and speaking.
+            </p>
+            <ul class="project-card__tags">
+              <li>Multi-page</li>
+              <li>Editorial Design</li>
+              <li>Substack</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 4: Roots & Proofs 26 -->
         <article class="project-card">
           <div class="project-card__img">
             <img src="/public/project-rootsandproofs.webp"
                  alt="Roots & Proofs 26 — immersive event website for a Brooklyn cultural night, with full-bleed photo hero and ticketing integration."
-                 width="800" height="600" loading="lazy" decoding="async" />
+                 width="800" height="349" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.rootsandproofs26.com" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_rootsandproofs">View Project →</a>
+              <a href="https://www.rootsandproofs26.com" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_rootsandproofs">View Project<span class="visually-hidden">: Roots & Proofs 26</span> <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="project-card__info">
@@ -345,14 +402,14 @@
           </div>
         </article>
 
-        <!-- Project 3 -->
+        <!-- Project 5: Tend: Recovery Care -->
         <article class="project-card">
           <div class="project-card__img">
             <img src="/public/project-tend.webp"
                  alt="Tend: Recovery Care — iOS app landing page that turns hospital discharge paperwork into a structured recovery schedule."
-                 width="800" height="600" loading="lazy" decoding="async" />
+                 width="800" height="375" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.tendrecovery.app" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_tend">View Project →</a>
+              <a href="https://www.tendrecovery.app" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_tend">View Project<span class="visually-hidden">: Tend: Recovery Care</span> <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="project-card__info">
@@ -373,14 +430,14 @@
           </div>
         </article>
 
-        <!-- Project 4 -->
+        <!-- Project 6: The Brooklyn Alphas -->
         <article class="project-card">
           <div class="project-card__img">
             <img src="/public/project-alphas.webp"
                  alt="The Brooklyn Alphas — full organizational website for the Gamma Iota Lambda Chapter of Alpha Phi Alpha Fraternity, with history, programs, and member tools."
-                 width="800" height="600" loading="lazy" decoding="async" />
+                 width="800" height="371" loading="lazy" decoding="async" />
             <div class="project-card__overlay">
-              <a href="https://www.gil1906.org" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_alphas">View Project →</a>
+              <a href="https://www.gil1906.org" target="_blank" rel="noopener" class="project-card__link" data-outbound="project_alphas">View Project<span class="visually-hidden">: The Brooklyn Alphas</span> <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="project-card__info">
@@ -605,18 +662,21 @@
 
       <div class="about__img-wrap">
         <div class="about__img-frame">
-          <picture>
-            <source srcset="/public/manhattan-ave.webp" type="image/webp" />
-            <img
-              src="/public/manhattan-ave.jpg"
-              alt="Manhattan Avenue street sign, Brooklyn, NY"
-              class="about__img"
-              width="800"
-              height="1000"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <!-- Cover-cropped into a portrait frame, so it renders wider than the
+               frame itself: about 113vw on phones and up to 870px on desktop. -->
+          <img
+            src="/public/manhattan-ave-1200.webp"
+            srcset="/public/manhattan-ave-800.webp 800w,
+                    /public/manhattan-ave-1200.webp 1200w,
+                    /public/manhattan-ave-1800.webp 1800w"
+            sizes="(max-width: 768px) 113vw, 870px"
+            alt="Manhattan Avenue street sign, Brooklyn, NY"
+            class="about__img"
+            width="1800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="about__img-caption">
           <p>Manhattan Ave · Brooklyn, NY</p>
@@ -765,12 +825,12 @@
           <div class="form-row">
             <div class="form-group">
               <label for="name">Your Name <span aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name" />
+              <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name" aria-describedby="nameError" />
               <span class="form-error" id="nameError"></span>
             </div>
             <div class="form-group">
               <label for="email">Email <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-describedby="emailError" />
               <span class="form-error" id="emailError"></span>
             </div>
           </div>
@@ -792,7 +852,7 @@
             <label for="message">Tell Us About Your Project <span aria-hidden="true">*</span></label>
             <textarea id="message" name="message" rows="5"
               placeholder="What are you building? Who's it for? What's your timeline? The more context the better."
-              required></textarea>
+              required aria-describedby="messageError"></textarea>
             <span class="form-error" id="messageError"></span>
           </div>
 
@@ -807,7 +867,9 @@
             <span class="btn__loading" hidden>Sending…</span>
           </button>
 
-          <div class="form-feedback" id="formFeedback" role="alert" hidden></div>
+          <div class="form-feedback" id="formFeedback" hidden></div>
+          <!-- Announces sending, success, and error to screen readers; present from load so changes are read -->
+          <p class="visually-hidden" id="formStatus" role="status" aria-live="polite"></p>
 
         </form>
       </div>
@@ -850,6 +912,6 @@
   </footer>
 
 
-  <script src="scripts/mas.js"></script>
+  <script src="scripts/mas.js" defer></script>
 </body>
 </html>
