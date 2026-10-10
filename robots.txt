@@ -1,4 +1,4 @@
-# Manhattan Ave Studio — robots.txt
+# Manhattan Ave Studio: robots.txt
 # https://www.manhattanavestudio.com/
 
 User-agent: *
