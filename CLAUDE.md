@@ -5,7 +5,7 @@ The studio's own site: one homepage plus privacy, terms, and 404 pages. Eugene A
 ## Status
 
 - Live at https://www.manhattanavestudio.com, deployed by Vercel from `main`.
-- Selected Work shows six projects (see Current projects below).
+- Selected Work shows seven projects (see Current projects below).
 - October 2026 audit: the fixes that keep the design and wording as they are are in. Visual proposals and copy items wait on Eugene (see Open audit items).
 
 ## Stack
@@ -46,12 +46,13 @@ To remove a project, delete its card, its image, and its sitemap entry, then sea
 
 In card order, newest first:
 
-1. Dr. Amanda L. Aiken: https://www.amandalaiken.com (View Project)
-2. Village Lions RFC: https://villagelions-site.vercel.app/ (View Preview)
-3. Nichole Gabrielle & Co.: https://nicholegabrielle-site.vercel.app/ (View Preview)
-4. Roots & Proofs 26: https://www.rootsandproofs26.com
-5. Tend: Recovery Care: https://www.tendrecovery.app
-6. The Brooklyn Alphas: https://www.gil1906.org
+1. Fly Black Girls Fly: https://flyblackgirlsfly.com (View Project)
+2. Dr. Amanda L. Aiken: https://www.amandalaiken.com (View Project)
+3. Village Lions RFC: https://villagelions-site.vercel.app/ (View Preview)
+4. Nichole Gabrielle & Co.: https://nicholegabrielle-site.vercel.app/ (View Preview)
+5. Roots & Proofs 26: https://www.rootsandproofs26.com
+6. Tend: Recovery Care: https://www.tendrecovery.app
+7. The Brooklyn Alphas: https://www.gil1906.org
 
 `public/project-futureforward.webp` is in the repo but no card uses it.
 
