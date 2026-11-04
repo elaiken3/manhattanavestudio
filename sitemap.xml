@@ -4,12 +4,16 @@
 
   <url>
     <loc>https://www.manhattanavestudio.com/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.manhattanavestudio.com/public/og-image.png</image:loc>
       <image:title>Manhattan Ave Studio — Custom Web Development, Brooklyn NY</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.manhattanavestudio.com/public/project-flyblackgirlsfly.webp</image:loc>
+      <image:title>Fly Black Girls Fly: travel advisor website</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.manhattanavestudio.com/public/project-amandalaiken.webp</image:loc>
